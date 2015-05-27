@@ -1,7 +1,10 @@
 "---------基本設定--------
 " vim互換にしない
 set nocompatible
- 
+
+"シンタックスハイライトを有効にする
+syntax on
+
 " 自動再読込
 set autoread
 
@@ -21,8 +24,13 @@ set showmatch
 "OSのクリップボード使用
 set clipboard+=unnamed
 
+"括弧補完
+inoremap {<Enter> {}<Left><CR><ESC><S-o>
+inoremap [<Enter> []<Left><CR><ESC><S-o>
+inoremap (<Enter> ()<Left><CR><ESC><S-o>
+
 " カラースキーム
-colorscheme hybrid 
+colorscheme hybrid
 
 "-------- Java --------
 set sm
